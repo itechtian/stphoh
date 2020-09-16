@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+{% if patient %}
+<p>{{patient}}</p>
+<hr>
+<br>
+{% endif %}
+<div class="beta-box-fw flex-correct-4 main  flex-gocenter">
+    <div class="beta-box">
+        <h3 class="go-center">HIV_AIDS/ HEPETITIS TEST RESULT FOR</h3>
+        <form method="POST" class="form">
+            {% csrf_token %}
+            <div class="form-group">
+                <span>Hiv/Aids Result</span><input type="text" name="hivaidtest" autofocus required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span></span>Hepetitis_B Result</span><input type="text" name="hepatitisBtest" required>
+            </div>
+            <hr>
+            
+            <button type="submit" class="beta-btn">Record Data</button>
+            <a href="{% url 'adminview' %}">Cancel</a>
+        </form>
+    </div>
+    <br>
+
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+.logout a{
+    color:white;
+}
+
+.form a{
+    color:white;
+}
+
+.i a{
+    color:white;
+}
+
+span{
+    padding: 10px;
+}
+
+.photo_area{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.main{
+    display: flex;
+    height: calc(100vh - 100px)
+}
+
+.form{
+    border:solid;
+    width:100%;
+    padding: 15px;
+}
+
+.form input{
+    width:100%;
+    height:5vh;
+}
+

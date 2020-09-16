@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="beta-box go center">
+<p>patient ID: {{patient.id}}</p>
+<p>{{patient}}</p>
+
+<hr>
+<p>patient AGE: {{patient.age}}</p>
+<p>patient SEX: {{patient.sex}}</p>
+<p>patient PHONE: {{patient.phone}}</p>
+
+<hr>
+
+<h4>TEST RESULT FOR {{patient.first}} {{patient.last}}</h4>
+
+<p>HIV TEST: {{patient.result.hiv_aid_test}}</p>
+<p>HEPATITIS B TEST: {{patient.result.hepatitis_B_test}}</p>
+
+
+<a href="/admin_view">back to home</a>
+</div>
+{% endblock %}

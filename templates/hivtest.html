@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="beta-box-fw flex-correct-4 main  flex-gocenter">
+    <div class="beta-box">
+        <h3 class="go-center">HIV_AIDS/ HEPETITIS TEST RECORD FOR</h3>
+        <form method="POST" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+            <div class="form-group">
+                <span>Patient Fname</span><input type="text" name="first" autofocus required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span>Patient Lname</span><input type="text" name="last" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span>Patient Age</span><input type="number" name="age" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span>Patient Sex:</span>
+                <select required name="sex">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span>Patient number</span><input type="tel" name="phone" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <span>Patient State of origin:</span>
+                <select required name="state">
+                    <option>Lagos</option>
+                    <option>Abuja</option>
+                </select>
+            </div>
+            <hr>
+            <button type="submit" class="beta-btn">Record Data</button>
+            <a href="{% url 'adminview' %}">Cancel</a>
+        </form>
+    </div>
+    <br>
+
+</div>
+
+
+
+{% endblock %}

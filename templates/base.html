@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://itechtian.github.io/piginstyle1/piginstyle.css" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+
+</head>
+
+<body>
+   
+    <div class="beta-box-fw beta-flex">
+
+        <div class="beta-box-fw beta-shadow flex-correct-1 side">
+           
+            <div class="side_head go-center">
+                <img src="static/image/stphoh_logo.png">
+            </div>
+            <hr>
+            <div class="side_body put-wella">
+                <p>What do You want to do today?</p>
+                <div class="beta-box flex-gocenter">
+                    <img src="static/image/Clark.jpg" width="150px">
+                </div>
+                <p class="go-center">{{user.username}}</p>
+                <div class="beta-box-fw work_to_do beta-flex">
+                    <button class="beta-btn green i flex-correct-1"><a href="/hiv_test">
+                            Record HIV_AIDS/HB TEST </a></button>
+                </div>
+                <hr>
+                <div class="beta-box-fw go-center">
+                    <!-- <p>Total number of HIV tested patient: 0 </p>
+                    <p>Total number of HB tested patient: 0 </p> -->
+                    <button class="beta-btn blue i flex-correct-1"><a href="#"> View All Tested Numbers</a></button>
+
+                </div>
+                <hr>
+                <button class="beta-btn red logout"><a href="/accounts/logout">Log out</a></button>
+                <hr>
+                <div class="beta-box-fw beta-flex">
+
+                    <h5 class=""> STPHOH Adminsite 2020 | DEveloped BY</h5>
+                    <img src="static/image/Trans_smoke.png" width="100px" alt="Clark-logo">
+
+                </div>
+            </div>
+        </div>
+        <div class="beta-box-fw flex-correct-4 main" id="main_id">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+    <script src="static/js/requestajax.js"></script>
+</body>
+
+</html>

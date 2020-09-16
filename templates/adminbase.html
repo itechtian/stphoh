@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="acess-menu beta-box">
+    {% for i in Patient %}
+   <p><button class="beta-btn green"><a href="add_result/{{i.id}}/{{i.first}}-{{i.last}}">Add</a></button> {{i}}</p>
+   <a href="{{i.id}}/patientinfo">view records</a>
+   <a href="delete/{{i.id}}">delete</a>
+    {% endfor %}
+</div>
+
+<div class="beta-box">
+    {% if midday >= check_hour %}
+    <h5 class="go-center">Good Evening {{user.username}}</h5>
+    {% else %}
+    <h5 class="go-center">Good Morning {{user.username}}</h5>
+
+    {% endif %}
+
+    {% if time %}
+    <p class="go-center">Its's {{time}} </p>
+    {% endif %}
+
+    <p>It is a beautiful day</p>
+</div>
+
+
+{% endblock %}
